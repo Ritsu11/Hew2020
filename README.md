@@ -20,6 +20,6 @@ root@???/var/www/html# chown www-data storage/ -R
 わからない点があれば連絡ください
 
 # Version
-Composer version 2.0.4 2020-10-30 22:39:11  
+Composer version 2.0.4    
 Node.js v10.22.1  
-MySql 5.7  
+MySQL 5.7  
