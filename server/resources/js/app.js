@@ -10,12 +10,12 @@ window.Vue = require("vue");
 
 import Vue from "vue";
 import BootstrapVue from "bootstrap-vue";
-import VueRouter from "vue-router";
+// import VueRouter from "vue-router";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
 Vue.use(BootstrapVue);
-Vue.use(VueRouter);
+// Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
