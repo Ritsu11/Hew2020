@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,72 +9,122 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap Reboot CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-reboot.min.css') }}">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <!-- Original CSS -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column" style="min-height: 100vh">
+
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+
+        <header class="white pt-2 shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+              <div class="row">
+                    <div class="col-md-2 pl-4">
+                        <a href="/" class="ml-5"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
+                    </div>
+                    <div class="col-md-10 mt-2">
+                        <form class="form-inline offset-md-4 pl-5">
+                          <input class="form-control mr-3 w-75 grey lighten-3 ml-5" type="text" placeholder="何をお探しですか？"
+                            aria-label="何をお探しですか？">
+                            <a href="/"><i class="fas fa-search fa-lg" aria-hidden="true"></i></a>
+                        </form>
+                    </div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-md-12">
+                        <ul class="nav mt-1">
+                            <li class="nav-item col-8 pl-5">
+                                <a class="nav-link text-dark mt-1 font-weight-bold" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-list mr-1"></i>カテゴリから探す</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">すべて</a>
+                                    <a class="dropdown-item" href="#">コンピュータ</a>
+                                    <a class="dropdown-item" href="#">家電、AV、カメラ</a>
+                                    <a class="dropdown-item" href="#">本、雑誌</a>
+                                    <a class="dropdown-item" href="#">映画、ビデオ</a>
+                                    <a class="dropdown-item" href="#">おもちゃ、ゲーム</a>
+                                    <a class="dropdown-item" href="#">アンティーク、コレクション</a>
+                                    <a class="dropdown-item" href="#">スポーツ、レジャー</a>
+                                    <a class="dropdown-item" href="#">自動車、オートバイ</a>
+                                    <a class="dropdown-item" href="#">ファッション</a>
+                                    <a class="dropdown-item" href="#">アクセサリー、時計</a>
+                                    <a class="dropdown-item" href="#">食品、飲料</a>
+                                    <a class="dropdown-item" href="#">住まい、インテリア</a>
+                                    <a class="dropdown-item" href="#">事務、店舗用品</a>
+                                    <a class="dropdown-item" href="#">その他</a>
+                                  </div>
                             </li>
+                            @guest
+                                <li class="nav-item ml-5">
+                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('login') }}"><span class="small-font">{{ __('ログイン') }}</span></a>
+                                </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('アカウントを作成') }}</a>
+                                        <a class="nav-link btn btn-danger btn-sm " href="{{ route('register') }}"><span class="small-font">{{ __('新規会員登録') }}</span></a>
                                 </li>
                             @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                            @else
+                                <li class="nav-item mt-1 ml-5">
+                                    <a class="nav-link" href="{{ url('/mypage/like') }}">いいね！一覧</a>
+                                </li>
+                                <li class="nav-item dropdown mt-1">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        マイページ <span class="caret"></span>
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                             {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                                         </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </header>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
+
+    <main class="py-4 mb-auto">
+        @yield('content')
+    </main>
+
+    <footer class="page-footer elegant-color">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="/"> 賭ケオク.com</a>
+        </div>
+    </footer>
+
+    </div>
+    <!-- jQuery -->
+    <script src="{{ asset('js/vendor/jquery-3.4.1.min.js') }}"></script>
+    <!-- jQuery UI -->
+    <script src="{{ asset('js/vendor/jquery-ui-1.10.3.custom.min.js') }}"></script>
+    <!-- modernizr JS -->
+    <script src="{{ asset('js/vendor/modernizr.custom.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="{{ asset('js/vendor/popper.min.js') }}"></script>
+    <!-- Bootstrap core JS -->
+    <script src="{{ asset('js/vendor/bootstrap.bundle.min.js') }}"></script>
+    <!-- MDB core JS -->
+    <script src="{{ asset('js/vendor/mdb.min.js') }}"></script>
 </body>
 </html>

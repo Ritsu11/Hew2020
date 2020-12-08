@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+/* グローバル設定 ********************/
+html {
+	font-size: 62.5%;
+	/* 10px */
+}
+
+body {
+	font-family: "Parisienne", "cursive", "Apple Chancery", "游明朝", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "ＭＳ 明朝", serif;
+}
+/* ヘッダーエリア */
+header{
+  height: 120px;
+  width: 100%;
+  background-color: cornsilk;
+}
+.header_up{
+  text-align: center;
+  padding-top: 1%;
+  margin-bottom: 1%;
+}
+.form-text{
+  width: 50%;
+  height:26px;
+  padding: 5px;
+}
+.form-button{
+  width: 4%;
+  height: 40px;
+}
+.logo_top{
+  height:40px;
+  margin-left: 14%;
+  margin-right: -16%;
+  float: left;
+}
+.header_nav ul li a{
+  color: black;
+  text-decoration: none;
+}
+.header_nav ul li{
+  clear: both;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.mar1{
+  margin-left: 14%;
+  font-weight: bold;
+}
+.mar2{
+  margin-left: 2%;
+  margin-right: 16%;
+  font-weight: bold;
+}
+.mar3{
+  margin-left: 2%;
+  font-weight: bold;
+}
