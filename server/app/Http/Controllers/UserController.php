@@ -7,13 +7,18 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Sell;
 use App\Models\Good;
 
-class ShopController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
         $sells = Sell::paginate(6);
 
         return view('shop.shop', compact('sells'));
+    }
+
+    public function myPage()
+    {
+        return view('mypage.profile');
     }
 
     public function myLikes(Good $sell)

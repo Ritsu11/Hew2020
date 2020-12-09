@@ -28,9 +28,9 @@ class Good extends Model
         $like_add_info = Good::firstOrCreate(['sell_id' => $sell_id, 'user_id' => $user_id]);
 
         if ($like_add_info->wasRecentlyCreated) {
-            $message = 'カートに追加しました';
+            $message = 'いいねに追加しました';
         } else {
-            $message = 'カートに登録済みです';
+            $message = 'いいねに登録済みです';
         }
 
         return $message;
@@ -42,7 +42,7 @@ class Good extends Model
         $delete = $this->where('user_id', $user_id)->where('sell_id', $sell_id)->delete();
 
         if ($delete > 0) {
-            $message = 'カートから一つの商品を削除しました';
+            $message = 'いいねから一つの商品を削除しました';
         } else {
             $message = '削除に失敗しました';
         }

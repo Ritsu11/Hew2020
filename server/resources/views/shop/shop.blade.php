@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="text-center" style="width: 200px;margin: 20px auto; text-align:center;">
-        {{ $sells->links() }}
+        {{ $sells ?? ''->links() }}
     </div>
 </div>
 @endsection

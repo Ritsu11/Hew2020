@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
-    <!-- Material Design Bootstrap -->
+    <!-- Original Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <!-- Original CSS -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -28,7 +28,7 @@
 
     <div id="app">
 
-        <header class="white pt-2 shadow-sm">
+        <header class="white pt-2 shadow-sm pl-2">
             <div class="container">
               <div class="row">
                     <div class="col-md-2 pl-4">
@@ -38,7 +38,7 @@
                         <form class="form-inline offset-md-4 pl-5">
                           <input class="form-control mr-3 w-75 grey lighten-3 ml-5" type="text" placeholder="何をお探しですか？"
                             aria-label="何をお探しですか？">
-                            <a href="/"><i class="fas fa-search fa-lg" aria-hidden="true"></i></a>
+                            <a href="/"><i class="fas fa-search fa-lg text-dark" aria-hidden="true"></i></a>
                         </form>
                     </div>
                 </div>
@@ -76,17 +76,25 @@
                             @endif
                             @else
                                 <li class="nav-item mt-1 ml-5">
-                                    <a class="nav-link" href="{{ url('/mypage/like') }}">いいね！一覧</a>
+                                    <a class="nav-link text-dark" href="{{ url('/mypage/like') }}">いいね！一覧</a>
                                 </li>
                                 <li class="nav-item dropdown mt-1">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         マイページ <span class="caret"></span>
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ url('/mypage') }}">マイページ</a>
+                                        <a class="dropdown-item" href="{{ url('/mypage/like') }}">いいね！一覧</a>
+                                        <a class="dropdown-item" href="#">出品 - 出品中</a>
+                                        <a class="dropdown-item" href="#">出品 - 取引中</a>
+                                        <a class="dropdown-item" href="#">出品 - 売却済み</a>
+                                        <a class="dropdown-item" href="#">落札 - 入札中</a>
+                                        <a class="dropdown-item" href="#">落札 - 取引中</a>
+                                        <a class="dropdown-item" href="#">落札 - 落札済み</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                             {{ __('Logout') }}
+                                             {{ __('ログアウト') }}
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -103,12 +111,12 @@
 
     </div>
 
-    <main class="py-4 mb-auto">
+    <main class="py-4 ml-5 mb-auto">
         @yield('content')
     </main>
 
     <footer class="page-footer elegant-color">
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <div class="footer-copyright text-center py-3">2020 Copyright:
             <a href="/"> 賭ケオク.com</a>
         </div>
     </footer>

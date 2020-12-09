@@ -15,12 +15,12 @@
 //     return view('welcome');
 // });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'ShopController@index');
-Route::get('/mypage/like', 'ShopController@myLikes')->middleware('auth');
-Route::post('/mypage/like', 'ShopController@addMylikes')->middleware('auth');
-Route::post('/mypage/like/delete', 'ShopController@deleteMylikes')->middleware('auth');
+Route::get('/', 'UserController@index');
+Route::get('/mypage', 'UserController@myPage');
+Route::get('/mypage/like', 'UserController@myLikes')->middleware('auth');
+Route::post('/mypage/like', 'UserController@addMylikes')->middleware('auth');
+Route::post('/mypage/like/delete', 'UserController@deleteMylikes')->middleware('auth');

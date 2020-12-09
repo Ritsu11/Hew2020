@@ -1,3 +1,7 @@
-.small-font {
-    font-size: 0.6rem;
+
+.pt-cus-1 {
+    padding-top: 3px;
+}
+.pt-cus-2 {
+    padding-top: 100px;
 }
