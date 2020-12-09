@@ -14,6 +14,6 @@
         <a href="" class="text-decoration-none"><li class="list-group-item text-dark white">発送元・お届け先住所</li></a>
         <a href="" class="text-decoration-none"><li class="list-group-item text-dark white">支払い方法</li></a>
         <a href="" class="text-decoration-none"><li class="list-group-item text-dark white">メール</li></a>
-        <a href="" class="text-decoration-none"><li class="list-group-item text-dark white">Cras justo odio</li></a>
+        <a href="" class="text-decoration-none"><li class="list-group-item text-dark white">ログアウト</li></a>
     </ul>
 </div>
