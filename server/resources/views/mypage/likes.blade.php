@@ -20,6 +20,7 @@
             <!-- First row -->
             @foreach($likes as $like)
             <tr>
+                <td></td>
                 <th scope="row" style="width: 150px">
                 <img src="/image/{{ optional($like->sell)->imgpath }}" alt=""
                     class="img-fluid z-depth-0" width="100px">
@@ -33,6 +34,10 @@
                 {{-- <td class="font-weight-bold pt-4 text-size-big">
                 <strong>{{ number_format(optional($like->sell)->price)}}</strong>
                 </td> --}}
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
                     <form action="{{ url('/mypage/like/delete') }}" method="POST">
                         @csrf
