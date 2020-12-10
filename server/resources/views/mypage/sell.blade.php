@@ -4,7 +4,7 @@
 <div class="container pb-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form action="" method="post">
+            <form action="" method="post"　enctype="multipart/form-data">
                 @csrf
                 <div class="card shadow-none border-0 pb-4">
                     <div class="card-body pt-4">
@@ -12,31 +12,40 @@
                         <p>最大5枚までアップロードできます</p>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                              <span class="input-group-text" id="inputGroupFileAddon01">アップロード</span>
+                              <span class="input-group-text">アップロード</span>
                             </div>
                             <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="inputGroupFile01"
-                                aria-describedby="inputGroupFileAddon01">
-                              <label class="custom-file-label" for="inputGroupFile01">ファイルの選択</label>
+
+                                {{-- 画像のアップロード --}}
+                              <input type="file" class="custom-file-input"　name="images">
+                              <label class="custom-file-label">ファイルの選択</label>
+
                             </div>
                         </div>
                     </div>
                     <hr class="mb-3 mt-4">
                     <div class="card-body pt-3">
+
+                        {{-- 商品名 --}}
                         <label class="font-weight-bold">商品名</label>
-                        <input type="text" id="exampleForm2" class="form-control" placeholder="30文字まで">
+                        <input type="text" class="form-control" name="name" placeholder="30文字まで">
                     </div>
                     <div class="card-body">
+
+                        {{-- 商品説明 --}}
                         <label class="font-weight-bold">商品の説明</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <textarea class="form-control" name="detail" rows="5"></textarea>
                     </div>
                     <hr class="mb-3 mt-4">
                     <div class="card-body pt-3">
                         <p class="text-black-50 font-weight-bold mb-4 pb-2">商品の詳細</p>
+
+                        {{-- カテゴリーセレクト --}}
                         <label class="font-weight-bold">カテゴリー</label>
-                        <select class="form-control">
+                        <select class="form-control" name="category">
                             <option selected>選択してください</option>
                             <option value="コンピュータ">コンピュータ</option>
+                            <option value="家電、AV、カメラ">家電、AV、カメラ</option>
                             <option value="本、雑誌">本、雑誌</option>
                             <option value="映画、ビデオ">映画、ビデオ</option>
                             <option value="おもちゃ、ゲーム">おもちゃ、ゲーム</option>
@@ -50,8 +59,10 @@
                             <option value="事務、店舗用品">事務、店舗用品</option>
                             <option value="その他">その他</option>
                         </select>
+
+                        {{-- 商品状態セレクト --}}
                         <label class="font-weight-bold mt-4 pt-4">商品の状態</label>
-                        <select class="form-control">
+                        <select class="form-control" name="status">
                             <option selected>選択してください</option>
                             <option value="新品、未使用">新品、未使用</option>
                             <option value="未使用に近い">未使用に近い</option>
@@ -64,15 +75,19 @@
                     <hr class="mb-3 mt-4">
                     <div class="card-body pt-3">
                         <p class="text-black-50 font-weight-bold mb-4 pb-2">配送について</p>
+
+                        {{-- 送料負担セレクト --}}
                         <label class="font-weight-bold">配送料の負担</label>
-                        <select class="form-control">
+                        <select class="form-control" name="postage">
                             <option selected>選択してください</option>
                             <option value="送料込み">送料込み（出品者負担）</option>
                             <option value="着払い">着払い（購入者負担）</option>
                         </select>
+
+                        {{-- 発送地域セレクト --}}
                         <label class="font-weight-bold mt-4 pt-4">発送元の地域</label>
-                        <select class="form-control">
-                            <option value="" selected>選択してください</option>
+                        <select class="form-control" name="area">
+                            <option selected>選択してください</option>
                             <option value="北海道">北海道</option>
                             <option value="青森県">青森県</option>
                             <option value="岩手県">岩手県</option>
@@ -121,8 +136,10 @@
                             <option value="鹿児島県">鹿児島県</option>
                             <option value="沖縄県">沖縄県</option>
                         </select>
+
+                        {{-- 発送日数セレクト --}}
                         <label class="font-weight-bold mt-4 pt-4">発送までの日数</label>
-                        <select class="form-control">
+                        <select class="form-control" name="days">
                             <option selected>選択してください</option>
                             <option value="１〜２日で発送">１〜２日で発送</option>
                             <option value="２〜３日で発送">２〜３日で発送</option>
@@ -134,6 +151,8 @@
                         <p class="text-black-50 font-weight-bold mb-4 pb-2">価格</p>
                     </div>
                     <div class="form-group row">
+
+                        {{-- 開始価格 --}}
                         <label for="value" class="col-md-6 col-form-label text-md-left-3 ml-4 font-weight-bold">開始価格</label>
                         <p class="col-1 pt-2 ml-3 pl-5">￥</p>
                         <div class="col-md-4">
@@ -143,8 +162,10 @@
                     <hr class="mb-3 mt-4">
                     <div class="card-body pt-3">
                         <p class="text-black-50 font-weight-bold mb-4 pb-2">時間</p>
+
+                        {{-- 締め切り時間セレクト --}}
                         <label class="font-weight-bold pt-2 pb-1">締切時間</label>
-                        <select class="form-control">
+                        <select class="form-control" name="time">
                             <option selected>選択してください</option>
                             <option value="1">1時間後</option>
                             <option value="3">3時間後</option>
