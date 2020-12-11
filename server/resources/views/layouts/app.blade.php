@@ -86,6 +86,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ url('/mypage') }}">マイページ</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/like') }}">いいね！一覧</a>
+                                        <a class="dropdown-item" href="{{ url('/sell') }}">出品する</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/now') }}">出品 - 出品中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/trade') }}">出品 - 取引中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/end') }}">出品 - 売却済み</a>

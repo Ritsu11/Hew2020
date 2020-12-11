@@ -12,6 +12,7 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('categorys')->truncate();
         DB::table('categorys')->insert([
             'name' => 'コンピュータ'
         ]);

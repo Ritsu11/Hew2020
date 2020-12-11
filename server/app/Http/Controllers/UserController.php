@@ -60,7 +60,36 @@ class UserController extends Controller
     //出品
     public function sell()
     {
-        return view('mypage.sell');
+        $user = Auth::user();
+        return view('mypage.sell', compact('user'));
+    }
+
+    public function addSell(Request $request)
+    {
+        // $this->validate($request, Sell::$rules);
+        $sell = new Sell;
+
+        /**
+         * fillでまとめると画像パストークンのせいでがおかしくなるので、一個ずつ格納
+         */
+        $sell->user_id = $request->user_id;
+        $sell->name = $request->name;
+        $sell->detail = $request->detail;
+        $sell->category_id = $request->category_id;
+        $sell->status_id = $request->status_id;
+        $sell->paystatus_id = $request->paystatus_id;
+        $sell->area_id = $request->area_id;
+        $sell->day_id = $request->day_id;
+        $sell->price = $request->price;
+
+        $image = $request->file('imgpath')->store('image');
+        $image = str_replace('public/image/', '', $image);
+        $sell->imgpath = $image;
+
+        $sell->save();
+
+
+        return redirect('/');
     }
 
     //出品中関連

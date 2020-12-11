@@ -12,6 +12,7 @@ class PayStatusTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('paystatuses')->truncate();
         DB::table('paystatuses')->insert([
             'name' => '送料込み'
         ]);

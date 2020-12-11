@@ -12,6 +12,7 @@ class DayTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('days')->truncate();
         DB::table('days')->insert([
             'name' => '１〜２日で発送'
         ]);

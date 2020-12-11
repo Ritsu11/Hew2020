@@ -25,7 +25,7 @@ Route::get('/', 'UserController@index');
 
 //マイページルート
 Route::get('/sell', 'UserController@sell')->middleware('auth');
-// Route::pose('/sell', 'UserController@sell')->middleware('auth');
+Route::post('/sell', 'UserController@addSell')->middleware('auth');
 Route::get('/mypage', 'UserController@myPage')->middleware('auth');
 Route::get('/mypage/like', 'UserController@myLikes')->middleware('auth');
 Route::post('/mypage/like', 'UserController@addMylikes')->middleware('auth');

@@ -12,6 +12,7 @@ class StatusTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('statuses')->truncate();
         DB::table('statuses')->insert([
             'name' => '新品、未使用'
         ]);

@@ -13,7 +13,7 @@
                  <div class="mycart_box">
                      {{$sell->name}} <br>
                      {{$sell->price}}円<br>
-                     <img src="/image/{{$sell->imgpath}}" alt="" class="incart" width="200px">
+                     <img src="{{ asset('storage/'.$sell->imgpath) }}" alt="" class="incart" width="200px">
                      <br>
                      {{$sell->detail}} <br>
 
