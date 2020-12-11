@@ -32,7 +32,9 @@
             <div class="container">
               <div class="row ml-3 pb-4">
                     <div class="col offset-4 pl-5">
-                        <a href="/" class="ml-5"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
+                        <div class="pr-5">
+                            <a href="/" class="ml-4 pl-3"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
+                        </div>
                     </div>
                 </div>
             </div>
