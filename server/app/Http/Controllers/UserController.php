@@ -12,7 +12,7 @@ class UserController extends Controller
     //インデックスページ
     public function index()
     {
-        $sells = Sell::paginate(6);
+        $sells = Sell::paginate(20);
 
         return view('shop.shop', compact('sells'));
     }
@@ -88,14 +88,14 @@ class UserController extends Controller
 
         $sell->save();
 
-
         return redirect('/');
     }
 
     //出品中関連
     public function sellNow()
     {
-        return view('mypage.putnow');
+        $put_now = Sell::all();
+        return view('mypage.putnow', compact('put_now'));
     }
 
     public function sellTrade()
