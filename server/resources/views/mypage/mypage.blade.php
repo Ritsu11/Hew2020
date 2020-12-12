@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-5">
+<div class="container mt-3">
 
-    <div class="row ml-3">
+    <div class="row ml-3 pl-3">
         @component('components.list')
         @endcomponent
     <!-- Section: Block Content -->
-    <div class="col-8 z-depth-1 ml-2 white">
+    <div class="col-8 z-depth-1 ml-4 white">
         <section>
-        <h1 class="text-center font-weight-bold" style="color:#555555;
-                font-size:1.2em; padding:36px 0px 0px 0px;">マイページ</h1>
-        <p class="text-center">{{ $message ?? ""}}</p><br>
+        <h1 class="text-center font-weight-bold" style="color:#555555;font-size:1.2em; padding:36px 0px 0px 0px;">
+            {{ $user->name }}
+        </h1>
         <!-- Shopping Cart table -->
         <div class="table-responsive">
         </div>

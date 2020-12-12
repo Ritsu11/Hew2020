@@ -1,35 +1,47 @@
-@extends('layouts.app')
+@extends('layouts.shopapp')
 
-@section('content')
-<div class="container">
-    <div class="mx-auto">
-        <h1 style="color:#555555; text-align:center; font-size:1.2em; padding:24px 0px; font-weight:bold;">商品一覧</h1>
-        <div class="">
-            <div class="d-flex flex-row flex-wrap">
-                {{-- 商品はまだありません --}}
+@section('contents')
+<div class="container mt-3">
 
-                @foreach ($sells as $sell)
-                <div class="col-xs-6 col-sm-4 col-md-4 border m-2">
-                 <div class="mycart_box">
-                     {{$sell->name}} <br>
-                     {{$sell->price}}円<br>
-                     <img src="{{ asset('storage/'.$sell->imgpath) }}" alt="" class="incart" width="200px">
-                     <br>
-                     {{$sell->detail}} <br>
+      <div class="row">
 
-                     <form action="{{ url('/mypage/like') }}" method="POST">
-                         {{ csrf_field() }}
-                         <input type="hidden" name="sell_id" value="{{ $sell->id }}">
-                         <input type="submit" value="いいね！">
-                     </form>
-                 </div>
+        @foreach ($sells as $sell)
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card card-ecommerce">
+            <div class="view overlay ml-1">
+              <img src="{{ asset('storage/'.$sell->imgpath) }}" class="img-fluidincart ml-4 mt-3" height="200px" width="200px"
+                alt="">
+            </div>
 
-                 </div>
-                 @endforeach
+            <div class="card-body">
+              <h5 class="card-title mb-1">
+                <strong>
+                  <a href="" class="dark-grey-text">{{$sell->name}}</a>
+                </strong>
+              </h5>
+
+              <div class="card-footer pb-0 white">
+                <div class="row mb-0">
+                  <span class="float-left">
+                    <strong>￥{{$sell->price}}</strong>
+                    <form action="{{ url('/mypage/like') }}" method="POST" class="float-right ml-5">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="sell_id" value="{{ $sell->id }}">
+                        <button type="submit" class="btn btn-sm btn-link rounded-pill border-danger text-danger nav-link"><i class="far fa-heart text-danger pr-1"></i>いいね！</button>
+                    </form>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="text-center" style="width: 200px;margin: 20px auto; text-align:center;">
+        @endforeach
+
+      </div>
+
+    <div class="text-center">
         {{ $sells ?? ''->links() }}
     </div>
-</div>
+
+  </div>
 @endsection

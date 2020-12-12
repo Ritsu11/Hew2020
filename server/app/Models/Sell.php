@@ -20,7 +20,7 @@ class Sell extends Model
         'paystatus_id' => 'required',
         'area_id' => 'required',
         'day_id' => 'required',
-        'price' => 'required|numeric|between:300,9999999'
+        'price' => 'required|integer|between:300,9999999'
     ];
 
     public static $message = [
@@ -37,7 +37,7 @@ class Sell extends Model
         'area_id.required' => '選択してください',
         'day_id.required' => '選択してください',
         'price.required' => '入力してください',
-        'price.numeric' => '数値を入力してください',
+        'price.integer' => '数値を入力してください',
         'price.between' => '300以上9999999以下で入力してください'
     ];
 }

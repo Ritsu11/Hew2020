@@ -21,7 +21,7 @@
                             <div class="custom-file">
 
                                 {{-- 画像のアップロード --}}
-                              <input type="file" class="custom-file-input" name="imgpath" value="{{ old('imgpath') }}">
+                              <input type="file" class="custom-file-input" name="imgpath" value="{{ old('imgpath') }}" required>
                               <label class="custom-file-label">ファイルの選択</label>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
 
                         {{-- 商品名 --}}
                         <label class="font-weight-bold">商品名<span class="badge badge-danger shadow-none ml-2">必須</span></label>
-                        <input type="text" class="form-control" name="name" placeholder="30文字まで" value="{{ old('name') }}">
+                        <input type="text" class="form-control" name="name" placeholder="30文字まで" value="{{ old('name') }}" required>
                             <div class="pt-2">
                                 <span class="help-block h6 text-danger">{{$errors->first('name')}}</span>
                             </div>
@@ -43,7 +43,7 @@
 
                         {{-- 商品説明 --}}
                         <label class="font-weight-bold">商品の説明<span class="badge badge-danger shadow-none ml-2">必須</span></label>
-                        <textarea class="form-control" name="detail" rows="5">{{ old('detail') }}</textarea>
+                        <textarea class="form-control" name="detail" rows="5" required>{{ old('detail') }}</textarea>
                             <div class="pt-2">
                                 <span class="help-block h6 text-danger">{{$errors->first('detail')}}</span>
                             </div>
@@ -193,7 +193,7 @@
                         <label for="value" class="col-md-6 col-form-label text-md-left-3 ml-4 font-weight-bold">開始価格<span class="badge badge-danger shadow-none ml-2">必須</span></label>
                         <p class="col-1 pt-2 ml-3 pl-5">￥</p>
                         <div class="col-md-4">
-                            <input id="number" type="number" class="form-control" name="price" value="{{ old('price') }}" placeholder="0" min="300" max="9999999">
+                            <input id="number" type="number" class="form-control" name="price" value="{{ old('price') }}" placeholder="0" min="300" max="9999999" required>
                             <div class="pt-2">
                                 <span class="help-block h6 text-danger">{{$errors->first('price')}}</span>
                             </div>
@@ -224,4 +224,5 @@
         </div>
     </div>
 </div>
+
 @endsection

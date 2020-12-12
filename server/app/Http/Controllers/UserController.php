@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Sell;
 use App\Models\Good;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -18,9 +19,10 @@ class UserController extends Controller
     }
 
     //プロフィール
-    public function myPage()
+    public function myPage(User $user)
     {
-        return view('mypage.mypage');
+        $user = Auth::user();
+        return view('mypage.mypage', compact('user'));
     }
 
     //いいね一覧

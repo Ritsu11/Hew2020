@@ -26,9 +26,9 @@
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh">
 
-    <div id="app" class="ml-1">
+    <div id="app">
 
-        <header class="white pt-2 shadow-sm pl-1" style="padding: 0px 1px 0px 0px">
+        <header class="white pt-2 shadow-sm pr-2">
             <div class="container">
               <div class="row">
                     <div class="col-md-2 pl-4">
@@ -113,7 +113,7 @@
     </div>
 
     <main class="py-4 mb-auto">
-        @yield('content')
+        @yield('contents')
     </main>
 
     <footer class="page-footer elegant-color">
