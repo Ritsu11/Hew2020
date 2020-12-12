@@ -38,10 +38,10 @@ class UserController extends Controller
         $message = $sell->addLike($sell_id);
 
         //追加後の情報を取得
-        $likes = $sell->showLike();
+        // $likes = $sell->showLike();
 
 
-        return view('mypage.likes', compact('likes', 'message'));
+        return redirect('/');
     }
 
     public function deleteMylikes(Request $request, Good $sell)
@@ -66,7 +66,7 @@ class UserController extends Controller
 
     public function addSell(Request $request)
     {
-        // $this->validate($request, Sell::$rules);
+        $this->validate($request, Sell::$rules, Sell::$message);
         $sell = new Sell;
 
         /**
@@ -94,7 +94,8 @@ class UserController extends Controller
     //出品中関連
     public function sellNow()
     {
-        $put_now = Sell::all();
+        $user_id = Auth::id();
+        $put_now = Sell::where('user_id', $user_id)->get();
         return view('mypage.putnow', compact('put_now'));
     }
 
