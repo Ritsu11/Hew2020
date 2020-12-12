@@ -13,10 +13,11 @@
 
                         <div class="row pl-2 pb-2">
                            <div class="col-md-4 offset-2">
-                               <h1 class="h3">ログイン</h1>
+                               <h1 class="h3">{{ __('ログイン') }}</h1>
                            </div>
                         </div>
 
+                        {{-- メールアドレスinput --}}
                         <div class="row pl-2">
                             <div class="col-md-8 offset-2">
                                 <label for="email" style="margin: 0px">{{ __('メールアドレス') }}</label>
@@ -32,6 +33,7 @@
                             </div>
                         </div>
 
+                        {{-- パスワードinput --}}
                         <div class="row pl-2 mt-3">
                             <div class="col-md-8 offset-2">
                                 <label for="password" style="margin: 0px">{{ __('パスワード') }}</label>
@@ -47,6 +49,7 @@
                             </div>
                         </div>
 
+                        {{-- パスワード保存checkbox --}}
                         <div class="row mt-3">
                             <div class="col-md-4 offset-2 pl-2">
                                 <div class="pl-4">
@@ -63,6 +66,7 @@
                             </div>
                         </div>
 
+                        {{-- ログインボタン --}}
                         <div class="row mt-4 ml-5 pl- mr-3">
                             <div class="col-md-8 offset-1 pr-2">
                                     <button type="submit" class="btn btn-primary btn-block">
@@ -71,6 +75,7 @@
                             </div>
                         </div>
 
+                        {{-- パスワードリセットリンク --}}
                         <div class="row mt-2 ml-5 pl-4">
                             <div class="col-md-8 offset-2 pr-5">
                                 <div class="ml-1">

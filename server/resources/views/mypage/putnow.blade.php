@@ -41,11 +41,11 @@
                     <td>
 
                         {{-- 編集ボタン --}}
-                        {{-- <form action="{{ url('/mypage/like/delete') }}" method="POST">
+                        <form action="{{ url('/mypage/like/delete') }}" method="POST">
                             @csrf
                             <input type="hidden" name="sell_id" value="{{ optional($put->sell)->id }}">
-                            <input type="submit" value="削除" class="btn btn-primary btn-sm">
-                        </form> --}}
+                            <input type="submit" value="編集" class="btn btn-primary btn-sm">
+                        </form>
                     </td>
                 </tr>
                 @endforeach
