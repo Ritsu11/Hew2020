@@ -166,7 +166,7 @@ return [
          * Package Service Providers...
          */
 
-        Intervention\Image\ImageServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,7 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Image' => Intervention\Image\ImageServiceProvider::class,
+        // 'Image' => Intervention\Image\ImageServiceProvider::class,
     ],
 
 ];
