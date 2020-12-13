@@ -10,8 +10,8 @@
     <div class="col-8 z-depth-1 ml-4 white">
         <section>
         <h1 class="text-center font-weight-bold" style="color:#555555;
-                font-size:1.2em; padding:36px 0px 0px 0px;">いいね！一覧</h1>
-        <p class="text-center">{{ $message ?? ""}}</p><br>
+                font-size:1.2em; padding:25px 0px 13px 0px;">いいね！一覧</h1>
+        {{-- <p class="text-center">{{ $message ?? ""}}</p><br> --}}
         <!-- Shopping Cart table -->
         <div class="table-responsive">
         <table class="table product-table table-cart-v-1">
@@ -23,7 +23,7 @@
                 <td></td>
                 <th scope="row" style="width: 150px">
                 <img src="{{ asset('storage/'. optional($like->sell)->imgpath) }}" alt=""
-                    class="img-fluid z-depth-0">
+                    class="img-fluid z-depth-0" width="70px" height="50px">
                 </th>
                 <td>
                 <h5 class="mt-2 pt-cus-1">

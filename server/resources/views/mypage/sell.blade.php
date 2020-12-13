@@ -125,44 +125,44 @@
                                 <option @if ( old('area_id') == "7" ) selected @endif value="7"> 福島県</option>
                                 <option @if ( old('area_id') == "8" ) selected @endif value="8"> 茨城県</option>
                                 <option @if ( old('area_id') == "9" ) selected @endif value="9"> 栃木県</option>
-                                <option @if ( old('area_id') == "10" ) selected @endif value="10" >群馬県</option>
-                                <option @if ( old('area_id') == "11" ) selected @endif value="11" >埼玉県</option>
-                                <option @if ( old('area_id') == "12" ) selected @endif value="12" >千葉県</option>
-                                <option @if ( old('area_id') == "13" ) selected @endif value="13" >東京都</option>
-                                <option @if ( old('area_id') == "14" ) selected @endif value="14" >神奈川県</option>
-                                <option @if ( old('area_id') == "15" ) selected @endif value="15" >新潟県</option>
-                                <option @if ( old('area_id') == "16" ) selected @endif value="16" >富山県</option>
-                                <option @if ( old('area_id') == "17" ) selected @endif value="17" >石川県</option>
-                                <option @if ( old('area_id') == "18" ) selected @endif value="18" >福井県</option>
-                                <option @if ( old('area_id') == "19" ) selected @endif value="19" >山梨県</option>
-                                <option @if ( old('area_id') == "20" ) selected @endif value="20" >長野県</option>
-                                <option @if ( old('area_id') == "21" ) selected @endif value="21" >岐阜県</option>
-                                <option @if ( old('area_id') == "22" ) selected @endif value="22" >静岡県</option>
-                                <option @if ( old('area_id') == "23" ) selected @endif value="23" >愛知県</option>
-                                <option @if ( old('area_id') == "24" ) selected @endif value="24" >三重県</option>
-                                <option @if ( old('area_id') == "25" ) selected @endif value="25" >滋賀県</option>
-                                <option @if ( old('area_id') == "26" ) selected @endif value="26" >京都府</option>
-                                <option @if ( old('area_id') == "27" ) selected @endif value="27" >大阪府</option>
-                                <option @if ( old('area_id') == "28" ) selected @endif value="28" >兵庫県</option>
-                                <option @if ( old('area_id') == "29" ) selected @endif value="29" >奈良県</option>
-                                <option @if ( old('area_id') == "30" ) selected @endif value="30" >和歌山県</option>
-                                <option @if ( old('area_id') == "31" ) selected @endif value="31" >鳥取県</option>
-                                <option @if ( old('area_id') == "32" ) selected @endif value="32" >島根県</option>
-                                <option @if ( old('area_id') == "33" ) selected @endif value="33" >岡山県</option>
-                                <option @if ( old('area_id') == "34" ) selected @endif value="34" >広島県</option>
-                                <option @if ( old('area_id') == "35" ) selected @endif value="35" >山口県</option>
-                                <option @if ( old('area_id') == "36" ) selected @endif value="36" >徳島県</option>
-                                <option @if ( old('area_id') == "37" ) selected @endif value="37" >香川県</option>
-                                <option @if ( old('area_id') == "38" ) selected @endif value="38" >愛媛県</option>
-                                <option @if ( old('area_id') == "39" ) selected @endif value="39" >高知県</option>
-                                <option @if ( old('area_id') == "40" ) selected @endif value="40" >福岡県</option>
-                                <option @if ( old('area_id') == "41" ) selected @endif value="41" >佐賀県</option>
-                                <option @if ( old('area_id') == "42" ) selected @endif value="42" >長崎県</option>
-                                <option @if ( old('area_id') == "43" ) selected @endif value="43" >熊本県</option>
-                                <option @if ( old('area_id') == "44" ) selected @endif value="44" >大分県</option>
-                                <option @if ( old('area_id') == "45" ) selected @endif value="45" >宮崎県</option>
-                                <option @if ( old('area_id') == "46" ) selected @endif value="46" >鹿児島県</option>
-                                <option @if ( old('area_id') == "47" ) selected @endif value="47" >沖縄県</option>
+                                <option @if ( old('area_id') == "10" ) selected @endif value="10">群馬県</option>
+                                <option @if ( old('area_id') == "11" ) selected @endif value="11">埼玉県</option>
+                                <option @if ( old('area_id') == "12" ) selected @endif value="12">千葉県</option>
+                                <option @if ( old('area_id') == "13" ) selected @endif value="13">東京都</option>
+                                <option @if ( old('area_id') == "14" ) selected @endif value="14">神奈川県</option>
+                                <option @if ( old('area_id') == "15" ) selected @endif value="15">新潟県</option>
+                                <option @if ( old('area_id') == "16" ) selected @endif value="16">富山県</option>
+                                <option @if ( old('area_id') == "17" ) selected @endif value="17">石川県</option>
+                                <option @if ( old('area_id') == "18" ) selected @endif value="18">福井県</option>
+                                <option @if ( old('area_id') == "19" ) selected @endif value="19">山梨県</option>
+                                <option @if ( old('area_id') == "20" ) selected @endif value="20">長野県</option>
+                                <option @if ( old('area_id') == "21" ) selected @endif value="21">岐阜県</option>
+                                <option @if ( old('area_id') == "22" ) selected @endif value="22">静岡県</option>
+                                <option @if ( old('area_id') == "23" ) selected @endif value="23">愛知県</option>
+                                <option @if ( old('area_id') == "24" ) selected @endif value="24">三重県</option>
+                                <option @if ( old('area_id') == "25" ) selected @endif value="25">滋賀県</option>
+                                <option @if ( old('area_id') == "26" ) selected @endif value="26">京都府</option>
+                                <option @if ( old('area_id') == "27" ) selected @endif value="27">大阪府</option>
+                                <option @if ( old('area_id') == "28" ) selected @endif value="28">兵庫県</option>
+                                <option @if ( old('area_id') == "29" ) selected @endif value="29">奈良県</option>
+                                <option @if ( old('area_id') == "30" ) selected @endif value="30">和歌山県</option>
+                                <option @if ( old('area_id') == "31" ) selected @endif value="31">鳥取県</option>
+                                <option @if ( old('area_id') == "32" ) selected @endif value="32">島根県</option>
+                                <option @if ( old('area_id') == "33" ) selected @endif value="33">岡山県</option>
+                                <option @if ( old('area_id') == "34" ) selected @endif value="34">広島県</option>
+                                <option @if ( old('area_id') == "35" ) selected @endif value="35">山口県</option>
+                                <option @if ( old('area_id') == "36" ) selected @endif value="36">徳島県</option>
+                                <option @if ( old('area_id') == "37" ) selected @endif value="37">香川県</option>
+                                <option @if ( old('area_id') == "38" ) selected @endif value="38">愛媛県</option>
+                                <option @if ( old('area_id') == "39" ) selected @endif value="39">高知県</option>
+                                <option @if ( old('area_id') == "40" ) selected @endif value="40">福岡県</option>
+                                <option @if ( old('area_id') == "41" ) selected @endif value="41">佐賀県</option>
+                                <option @if ( old('area_id') == "42" ) selected @endif value="42">長崎県</option>
+                                <option @if ( old('area_id') == "43" ) selected @endif value="43">熊本県</option>
+                                <option @if ( old('area_id') == "44" ) selected @endif value="44">大分県</option>
+                                <option @if ( old('area_id') == "45" ) selected @endif value="45">宮崎県</option>
+                                <option @if ( old('area_id') == "46" ) selected @endif value="46">鹿児島県</option>
+                                <option @if ( old('area_id') == "47" ) selected @endif value="47">沖縄県</option>
                             </select>
                             <div class="pt-2">
                                 <span class="help-block h6 text-danger">{{$errors->first('area_id')}}</span>

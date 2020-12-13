@@ -10,8 +10,7 @@
     <div class="col-8 z-depth-1 ml-4 white">
         <section>
         <h1 class="text-center font-weight-bold" style="color:#555555;
-                font-size:1.2em; padding:36px 0px 0px 0px;">出品 - 出品中</h1>
-        <p class="text-center">{{ $message ?? ""}}</p><br>
+                font-size:1.2em; padding:25px 0px 13px 0px;">出品 - 出品中</h1>
         <!-- Shopping Cart table -->
         <div class="table-responsive">
             <table class="table product-table table-cart-v-1">
