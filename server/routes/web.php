@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     //プロフィールルート
     Route::get('/profile', 'UserController@profile');
     Route::get('/profile/send', 'UserController@send');
+    Route::post('/profile/send', 'UserController@addSend');
     Route::get('/profile/pay', 'UserController@pay');
     Route::get('/profile/mail', 'UserController@mail');
     Route::get('/profile/logout', 'UserController@logout');

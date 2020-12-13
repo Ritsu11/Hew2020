@@ -9,9 +9,16 @@
     <!-- Section: Block Content -->
     <div class="col-8 z-depth-1 ml-4 white">
         <section>
-        <h1 class="text-center font-weight-bold" style="color:#555555;
-                font-size:1.2em; padding:36px 0px 0px 0px;">ログアウト</h1>
-        <p class="text-center">{{ $message ?? ""}}</p><br>
+            <div class="text-center mt-5">
+                <div class="col-md-6 offset-3">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                        @csrf
+                        <button type="submit" class="btn btn-danger btn-block">
+                            {{ __('ログアウト') }}
+                        </button>
+                    </form>
+                </div>
+            </div>
         <!-- Shopping Cart table -->
         <div class="table-responsive">
         </div>

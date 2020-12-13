@@ -26,9 +26,7 @@
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh">
 
-    <div id="app">
-
-        <header class="white pt-2 shadow-sm pr-2">
+        <header class="white pt-2 shadow-sm pl-2">
             <div class="container">
               <div class="row">
                     <div class="col-md-2 pl-4">
@@ -109,8 +107,6 @@
                 </div>
             </div>
         </header>
-
-    </div>
 
     <main class="py-4 mb-auto">
         @yield('contents')

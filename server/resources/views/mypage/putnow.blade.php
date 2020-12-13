@@ -23,7 +23,7 @@
                     <td></td>
                     <th scope="row" style="width: 150px">
                     <img src="{{ asset('storage/'. $put->imgpath) }}" alt=""
-                        class="img-fluid z-depth-0" width="100px">
+                        class="img-fluid z-depth-0" width="70px" height="50px">
                     </th>
                     <td>
                     <h5 class="mt-2 pt-cus-1">

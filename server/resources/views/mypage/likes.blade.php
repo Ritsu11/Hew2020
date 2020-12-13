@@ -23,7 +23,7 @@
                 <td></td>
                 <th scope="row" style="width: 150px">
                 <img src="{{ asset('storage/'. optional($like->sell)->imgpath) }}" alt=""
-                    class="img-fluid z-depth-0" width="100px">
+                    class="img-fluid z-depth-0">
                 </th>
                 <td>
                 <h5 class="mt-2 pt-cus-1">

@@ -145,6 +145,11 @@ class UserController extends Controller
         return view('profile.send');
     }
 
+    public function updateSend()
+    {
+        return view('profile.send');
+    }
+
     //支払い関連
     public function pay()
     {

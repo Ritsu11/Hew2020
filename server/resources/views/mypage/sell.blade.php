@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container pb-5">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mr-1">
         <div class="col-md-8">
             <form action="/sell" method="post" enctype="multipart/form-data">
                 @csrf

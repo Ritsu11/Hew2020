@@ -28,7 +28,7 @@
 
     <div id="app" class="ml-1">
 
-        <header class="white pt-2 shadow-sm pl-1" style="padding: 0px 1px 0px 0px">
+        <header class="white pt-2 shadow-sm pl-1">
             <div class="container">
               <div class="row">
                     <div class="col-md-2 pl-4">
@@ -112,7 +112,7 @@
 
     </div>
 
-    <main class="py-4 mb-auto">
+    <main class="py-4 mb-4">
         @yield('content')
     </main>
 
