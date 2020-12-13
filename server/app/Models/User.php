@@ -3,11 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Model
 {
-    protected $guarded = [
-        'id'
+    protected $fillable = [
+        'name',
+        'firstname',
+        'lastname',
+        'firstname_kana',
+        'lastname_kana',
+        'postal_code',
+        'area_id',
+        'city',
+        'city_address',
     ];
 
     public static $rules = [
