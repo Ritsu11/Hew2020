@@ -72,7 +72,7 @@ class UserController extends Controller
         $sell = new Sell;
 
         /**
-         * fillでまとめると画像パストークンのせいでがおかしくなるので、一個ずつ格納
+         * fillでまとめると画像パスがトークンのせいでがおかしくなるので、一個ずつ格納
          */
         $sell->user_id = $request->user_id;
         $sell->name = $request->name;
@@ -87,6 +87,8 @@ class UserController extends Controller
         $image = $request->file('imgpath')->store('image');
         $image = str_replace('public/image/', '', $image);
         $sell->imgpath = $image;
+
+        unset($sell['_token']);
 
         $sell->save();
 
@@ -142,7 +144,29 @@ class UserController extends Controller
     //発送元関連
     public function send()
     {
-        return view('profile.send');
+        $user_id = Auth::id();
+
+        //表示用Userモデル
+        $user = User::find($user_id);
+
+        return view('profile.send', compact('user'));
+    }
+
+    public function addSend(Request $request)
+    {
+        $user_id = Auth::id();
+
+        //表示用Userモデル
+        $user = User::find($user_id);
+        //変更用Userモデル
+        $change = User::find($user_id);
+
+        $form = $request->all();
+
+        unset($form['_token']);
+        $change->fill($form)->save();
+
+        return redirect('/profile/send');
     }
 
     public function updateSend()
