@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'name.string' => '文字を入力してください',
             'name.regex' => '使用できない記号が含まれています',
             'name.max' => '64文字以内で入力してください',
+            'name.unique' => 'このニックネームは既に使用されています',
             'email.required' => 'メールアドレスを入力してください',
             'email.string' => '文字を入力してください',
             'email.email' => 'メールアドレスを入力してください',
@@ -68,7 +69,7 @@ class RegisterController extends Controller
         // 'regex:/^[^!"#$%&\'()\.,\/:;<=>?@\[\\\]^`{|}~\s]+$/'
 
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:64'],
+            'name' => ['required', 'unique:users', 'string', 'max:64',],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ], $rules);
