@@ -40,6 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //プロフィールルート
     Route::get('/profile', 'UserController@profile');
+    Route::post('/profile', 'UserController@changeProfile');
     Route::get('/profile/send', 'UserController@send');
     Route::post('/profile/send', 'UserController@addSend');
     Route::get('/profile/pay', 'UserController@pay');

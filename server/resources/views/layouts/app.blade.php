@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <!-- Original CSS -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- Postal_code JS -->
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 </head>
 <body class="d-flex flex-column" style="min-height: 100vh">
 
