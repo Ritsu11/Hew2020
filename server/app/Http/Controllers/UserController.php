@@ -138,7 +138,30 @@ class UserController extends Controller
     //プロフィール
     public function profile()
     {
-        return view('profile.profile');
+        $user_id = Auth::id();
+
+        //表示用Userモデル
+        $user = User::find($user_id);
+
+        return view('profile.profile', compact('user'));
+    }
+
+    public function changeProfile(Request $request)
+    {
+        $this->validate($request, User::$rules_profile, User::$message_profile);
+        $user_id = Auth::id();
+
+        //表示用Userモデル
+        $user = User::find($user_id);
+        //変更用Userモデル
+        $change = User::find($user_id);
+
+        $form = $request->all();
+
+        unset($form['_token']);
+        $change->fill($form)->save();
+
+        return redirect('/profile');
     }
 
     //発送元関連
@@ -154,6 +177,7 @@ class UserController extends Controller
 
     public function addSend(Request $request)
     {
+        $this->validate($request, User::$rules_send, User::$message_send);
         $user_id = Auth::id();
 
         //表示用Userモデル
