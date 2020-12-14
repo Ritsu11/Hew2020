@@ -13,7 +13,7 @@
                 <div class="col-md-6 offset-3">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                         @csrf
-                        <button type="submit" class="btn btn-danger btn-block">
+                        <button type="submit" class="btn danger-color-dark text-white btn-block">
                             {{ __('ログアウト') }}
                         </button>
                     </form>
