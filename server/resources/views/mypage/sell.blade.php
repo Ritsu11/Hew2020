@@ -224,5 +224,5 @@
         </div>
     </div>
 </div>
-
+<a href="{{ url('/sell/auction') }}">TEST</a>
 @endsection

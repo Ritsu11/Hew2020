@@ -93,7 +93,7 @@
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/now') }}">出品 - 出品中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/trade') }}">出品 - 取引中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/sell/end') }}">出品 - 売却済み</a>
-                                        <a class="dropdown-item" href="{{ url('/mypage/bid/now') }}">落札 - 入札中</a>
+                                        <a class="dropdown-item" href="{{ url('/mypage/bid/now') }}">落札 - 参加可能</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/bid/trade') }}">落札 - 取引中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/bid/end') }}">落札 - 落札済み</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"

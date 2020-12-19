@@ -2,7 +2,7 @@
 
 @section('contents')
 <div class="container mt-3">
-      <div class="row">
+      <div class="row ml-1">
 
         @foreach ($sells as $sell)
         <div class="col-lg-3 col-md-6 mb-4">
@@ -22,7 +22,7 @@
               <div class="card-footer pb-0 white">
                 <div class="row mb-0">
                   <span class="float-left">
-                    <strong>￥{{ number_format($sell->price) }}</strong>
+                    <strong class="text-danger h5">￥{{ number_format($sell->price) }}</strong>
                     <form action="{{ url('/mypage/like') }}" method="POST" class="float-right ml-5">
                         @csrf
                         <input type="hidden" name="sell_id" value="{{ $sell->id }}">

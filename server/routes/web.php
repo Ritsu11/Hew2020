@@ -25,6 +25,7 @@ Route::get('/', 'UserController@index');
 
 Route::group(['middleware' => 'auth'], function () {
 
+    //ユーザー情報ルート
     Route::get('/sell', 'UserController@sell');
     Route::post('/sell', 'UserController@addSell');
     Route::get('/mypage', 'UserController@myPage');
@@ -46,4 +47,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile/pay', 'UserController@pay');
     Route::get('/profile/mail', 'UserController@mail');
     Route::get('/profile/logout', 'UserController@logout');
+
+    //オークション関連ルート
+    Route::get('/sell/auction', 'AuctionController@index');
 });
