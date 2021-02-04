@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,20 +28,21 @@
     <!-- Postal_code JS -->
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 </head>
+
 <body class="d-flex flex-column" style="min-height: 100vh">
 
     <div id="app" class="ml-1">
 
         <header class="white pt-2 shadow-sm pl-1">
             <div class="container">
-              <div class="row">
+                <div class="row">
                     <div class="col-md-2 pl-4">
                         <a href="/" class="ml-5"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
                     </div>
                     <div class="col-md-10 mt-2">
                         <form class="form-inline offset-md-4 pl-5">
-                          <input class="form-control mr-3 w-75 grey lighten-3 ml-5" type="text" placeholder="何をお探しですか？"
-                            aria-label="何をお探しですか？">
+                            <input class="form-control mr-3 w-75 grey lighten-3 ml-5" type="text"
+                                placeholder="何をお探しですか？" aria-label="何をお探しですか？">
                             <a href="/"><i class="fas fa-search fa-lg text-dark" aria-hidden="true"></i></a>
                         </form>
                     </div>
@@ -49,7 +51,9 @@
                     <div class="col-md-12">
                         <ul class="nav mt-1">
                             <li class="nav-item col-8 pl-5">
-                                <a class="nav-link text-dark mt-1 font-weight-bold" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-list mr-1"></i>カテゴリから探す</a>
+                                <a class="nav-link text-dark mt-1 font-weight-bold" href="/" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-list mr-1"></i>カテゴリから探す</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="#">すべて</a>
                                     <a class="dropdown-item" href="#">コンピュータ</a>
@@ -66,23 +70,26 @@
                                     <a class="dropdown-item" href="#">住まい、インテリア</a>
                                     <a class="dropdown-item" href="#">事務、店舗用品</a>
                                     <a class="dropdown-item" href="#">その他</a>
-                                  </div>
+                                </div>
                             </li>
                             @guest
                                 <li class="nav-item ml-5">
-                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('login') }}"><span class="small-font">{{ __('ログイン') }}</span></a>
+                                    <a class="nav-link btn btn-primary btn-sm" href="{{ route('login') }}"><span
+                                            class="small-font">{{ __('ログイン') }}</span></a>
                                 </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                        <a class="nav-link btn btn-danger btn-sm " href="{{ route('register') }}"><span class="small-font">{{ __('新規会員登録') }}</span></a>
-                                </li>
-                            @endif
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link btn btn-danger btn-sm " href="{{ route('register') }}"><span
+                                                class="small-font">{{ __('新規会員登録') }}</span></a>
+                                    </li>
+                                @endif
                             @else
                                 <li class="nav-item mt-1 ml-5">
                                     <a class="nav-link text-dark" href="{{ url('/mypage/like') }}">いいね！一覧</a>
                                 </li>
                                 <li class="nav-item dropdown mt-1">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         マイページ <span class="caret"></span>
                                     </a>
 
@@ -97,13 +104,14 @@
                                         <a class="dropdown-item" href="{{ url('/mypage/bid/trade') }}">落札 - 取引中</a>
                                         <a class="dropdown-item" href="{{ url('/mypage/bid/end') }}">落札 - 落札済み</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                             {{ __('ログアウト') }}
+                                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            {{ __('ログアウト') }}
                                         </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                         </form>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
                                     </div>
                                 </li>
                             @endguest
@@ -139,4 +147,5 @@
     <!-- MDB core JS -->
     <script src="{{ asset('js/vendor/mdb.min.js') }}"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,16 +25,18 @@
     <!-- Original CSS -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body class="d-flex flex-column" style="min-height: 100vh">
 
     <div id="app">
 
         <header class="pt-4">
             <div class="container">
-              <div class="row ml-3 pb-4">
+                <div class="row ml-3 pb-4">
                     <div class="col offset-4 pl-5">
                         <div class="pr-5">
-                            <a href="/" class="ml-4 pl-3"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
+                            <a href="/" class="ml-4 pl-3"><img src="/image/Kakeoku4.png" alt="" class="incart"
+                                    width="150px"></a>
                         </div>
                     </div>
                 </div>
@@ -66,4 +69,5 @@
     <!-- MDB core JS -->
     <script src="{{ asset('js/vendor/mdb.min.js') }}"></script>
 </body>
+
 </html>

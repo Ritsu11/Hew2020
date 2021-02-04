@@ -15,7 +15,7 @@
             <div class="card-body">
               <h5 class="card-title mb-1">
                 <strong>
-                  <a href="" class="dark-grey-text">{{$sell->name}}</a>
+                  <a href="/detail/{{ $sell->id }}" class="dark-grey-text">{{$sell->name}}</a>
                 </strong>
               </h5>
 
