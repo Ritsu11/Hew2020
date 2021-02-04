@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Sell;
 use App\Models\Good;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -18,11 +19,24 @@ class UserController extends Controller
         return view('shop.shop', compact('sells'));
     }
 
+    public function showDetail($id)
+    {
+        $detail = Sell::find($id);
+        $user = DB::table('users')->where('id', $detail->user_id)->first();
+        $category = DB::table('categorys')->where('id', $detail->category_id)->first();
+        $status = DB::table('statuses')->where('id', $detail->status_id)->first();
+        $paystatus = DB::table('paystatuses')->where('id', $detail->paystatus_id)->first();
+        $area = DB::table('areas')->where('id', $detail->area_id)->first();
+        $day = DB::table('days')->where('id', $detail->day_id)->first();
+
+        return view('shop.detail', compact('detail', 'user', 'category', 'status', 'paystatus', 'area', 'day'));
+    }
+
     //プロフィール
     public function myPage(User $user)
     {
-        $user = Auth::user();
-        return view('mypage.mypage', compact('user'));
+        $users = Auth::user();
+        return view('mypage.mypage', compact('users'));
     }
 
     //いいね一覧
@@ -37,7 +51,7 @@ class UserController extends Controller
     {
         //カートに追加の処理
         $sell_id = $request->sell_id;
-        $message = $sell->addLike($sell_id);
+        $sell->addLike($sell_id);
 
         //追加後の情報を取得
         // $likes = $sell->showLike();
@@ -152,7 +166,7 @@ class UserController extends Controller
         $user_id = Auth::id();
 
         //表示用Userモデル
-        $user = User::find($user_id);
+        // $user = User::find($user_id);
         //変更用Userモデル
         $change = User::find($user_id);
 
@@ -181,13 +195,12 @@ class UserController extends Controller
         $user_id = Auth::id();
 
         //表示用Userモデル
-        $user = User::find($user_id);
+        // $user = User::find($user_id);
         //変更用Userモデル
         $change = User::find($user_id);
 
         $form = $request->all();
 
-        unset($form['_token']);
         $change->fill($form)->save();
 
         return redirect('/profile/send');
