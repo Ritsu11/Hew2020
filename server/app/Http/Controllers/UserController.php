@@ -19,17 +19,41 @@ class UserController extends Controller
         return view('shop.shop', compact('sells'));
     }
 
+    //詳細画面
     public function showDetail($id)
     {
         $detail = Sell::find($id);
-        $user = DB::table('users')->where('id', $detail->user_id)->first();
-        $category = DB::table('categorys')->where('id', $detail->category_id)->first();
-        $status = DB::table('statuses')->where('id', $detail->status_id)->first();
-        $paystatus = DB::table('paystatuses')->where('id', $detail->paystatus_id)->first();
-        $area = DB::table('areas')->where('id', $detail->area_id)->first();
-        $day = DB::table('days')->where('id', $detail->day_id)->first();
+        if ($detail !== null) {
+            $user = DB::table('users')->where('id', $detail->user_id)->first();
+            $category = DB::table('categorys')->where('id', $detail->category_id)->first();
+            $status = DB::table('statuses')->where('id', $detail->status_id)->first();
+            $paystatus = DB::table('paystatuses')->where('id', $detail->paystatus_id)->first();
+            $area = DB::table('areas')->where('id', $detail->area_id)->first();
+            $day = DB::table('days')->where('id', $detail->day_id)->first();
+        } else {
+            return redirect('/');
+        }
 
         return view('shop.detail', compact('detail', 'user', 'category', 'status', 'paystatus', 'area', 'day'));
+    }
+
+    //検索
+    public function search(Request $request)
+    {
+        //キーワード受け取り
+        $keyword = $request->input('keyword');
+
+        //クエリ生成
+        $query = Sell::query();
+
+        //もしキーワードがあったら
+        if (!empty($keyword)) {
+            $query->where('name', 'like', '%' . $keyword . '%');
+        }
+
+        //ページネーション
+        $sells = $query->paginate(20);
+        return view('category.search', compact('sells'));
     }
 
     //プロフィール

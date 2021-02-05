@@ -20,7 +20,7 @@
 
                                 <!--Slides-->
                                 <div class="carousel-inner text-center text-md-left" role="listbox">
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item active ml-5">
                                         <img src="{{ asset('storage/' . $detail->imgpath) }}" alt="First slide"
                                             class="img-fluid" width="530" height="350">
                                     </div>
@@ -104,6 +104,18 @@
                                     残りの時間: ###
                                 </p>
                                 <p class="ml-xl-0 ml-4">
+                                    カテゴリ: {{ $category->name }}
+                                </p>
+                                <p class="ml-xl-0 ml-4">
+                                    状態: {{ $status->name }}
+                                </p>
+                                <p class="ml-xl-0 ml-4">
+                                    出品地域: {{ $area->name }}
+                                </p>
+                                <p class="ml-xl-0 ml-4">
+                                    発送までの日数: {{ $day->name }}
+                                </p>
+                                <p class="ml-xl-0 ml-4">
                                     出品者: <a href="#">{{ $user->name }}</a>
                                 </p>
 
@@ -117,9 +129,11 @@
                                             <p class="col-1 pt-2">￥</p>
                                             <div class="col-md-6">
                                                 <input id="number" type="number" class="form-control" name="price"
-                                                    value="{{ old('price') }}" placeholder="0" min="300" max="9999999" required>
+                                                    value="{{ old('price') }}" placeholder="0" min="300" max="9999999"
+                                                    required>
                                                 <div class="pt-2">
-                                                    <span class="help-block h6 text-danger">{{ $errors->first('price') }}</span>
+                                                    <span
+                                                        class="help-block h6 text-danger">{{ $errors->first('price') }}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -129,7 +143,6 @@
                                                 cart</button>
                                         </div>
                                     </div>
-                                    
                                 </div>
 
                             </div>

@@ -28,17 +28,18 @@
 
 <body class="d-flex flex-column" style="min-height: 100vh">
 
-    <header class="white pt-2 shadow-sm pl-2">
+    <header class="white shadow-sm pl-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 pl-4">
+                <div class="col-md-2 pl-4 pt-2">
                     <a href="/" class="ml-5"><img src="/image/Kakeoku4.png" alt="" class="incart" width="150px"></a>
                 </div>
                 <div class="col-md-10 mt-2">
-                    <form class="form-inline offset-md-4 pl-5">
-                        <input class="form-control mr-3 w-75 grey lighten-3 ml-5" type="text" placeholder="何をお探しですか？"
-                            aria-label="何をお探しですか？">
-                        <a href="/"><i class="fas fa-search fa-lg text-dark" aria-hidden="true"></i></a>
+                    <form action="{{ url('/search') }}" class="form-inline offset-md-4 pl-5">
+                        <input class="form-control w-75 grey lighten-3 ml-5" type="text" placeholder="何をお探しですか？"
+                            aria-label="何をお探しですか？" name="keyword" value="{{ $keyword ?? '' }}">
+                        <button type="submit" class="btn btn-link"><i class="fas fa-search fa-lg text-dark"
+                                aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>

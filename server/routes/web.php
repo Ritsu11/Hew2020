@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'UserController@index');
 Route::get('/detail/{id}', 'UserController@showDetail')->name('show');
+Route::get('/search', 'UserController@search');
 
 Route::group(['middleware' => 'auth'], function () {
 

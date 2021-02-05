@@ -868,5 +868,70 @@ class SellTableSeeder extends Seeder
             'price' => 84200,
             'imgpath' => 'image/mobile.jpg',
         ]);
+
+        DB::table('sells')->insert([
+            'name' => 'Apple macbook air 2019 i7',
+            'detail' => '新しいものを購入したため出品します。写真の通り、四隅に凹みがあります。また、十字キーの↑を紛失しています。（指で押せば反応するので使える状態ではあります）バッテリーが消耗しており、充電せずに使うと１日持ちません。充電しながら使えば問題なく使用できます。中古品なので神経質な方はご遠慮ください。',
+            'user_id' => 3,
+            'category_id' => 1,
+            'status_id' => 1,
+            'paystatus_id' => 2,
+            'area_id' => 23,
+            'day_id' => 2,
+            'price' => 103000,
+            'imgpath' => 'image/1.jpg',
+        ]);
+
+        DB::table('sells')->insert([
+            'name' => 'Nec ノート',
+            'detail' => '新しいものを購入したため出品します。四隅に凹みがあります。また、十字キーの↑を紛失しています。（指で押せば反応するので使える状態ではあります）バッテリーが消耗しており、充電せずに使うと１日持ちません。充電しながら使えば問題なく使用できます。中古品なので神経質な方はご遠慮ください。',
+            'user_id' => 2,
+            'category_id' => 1,
+            'status_id' => 4,
+            'paystatus_id' => 2,
+            'area_id' => 1,
+            'day_id' => 1,
+            'price' => 60300,
+            'imgpath' => 'image/2.jpg',
+        ]);
+
+        DB::table('sells')->insert([
+            'name' => 'Nec デスクトップ',
+            'detail' => '新しいものを購入したため出品します。十字キーの↑を紛失しています。（指で押せば反応するので使える状態ではあります）バッテリーが消耗しており、充電せずに使うと１日持ちません。充電しながら使えば問題なく使用できます。中古品なので神経質な方はご遠慮ください。',
+            'user_id' => 1,
+            'category_id' => 1,
+            'status_id' => 2,
+            'paystatus_id' => 2,
+            'area_id' => 32,
+            'day_id' => 1,
+            'price' => 50300,
+            'imgpath' => 'image/3.jpg',
+        ]);
+
+        DB::table('sells')->insert([
+            'name' => 'Nec Levie',
+            'detail' => '出品します。写真の通り、四隅に凹みがあります。また、十字キーの↑を紛失しています。（指で押せば反応するので使える状態ではあります）バッテリーが消耗しており、充電せずに使うと１日持ちません。充電しながら使えば問題なく使用できます。中古品なので神経質な方はご遠慮ください。',
+            'user_id' => 3,
+            'category_id' => 1,
+            'status_id' => 1,
+            'paystatus_id' => 2,
+            'area_id' => 41,
+            'day_id' => 2,
+            'price' => 210300,
+            'imgpath' => 'image/4.jpg',
+        ]);
+
+        DB::table('sells')->insert([
+            'name' => 'ThinkPad',
+            'detail' => '新しいものを購入したため出品します。写真の通り、四隅に凹みがあります。また、十字キーの↑を紛失しています。（指で押せば反応するので使える状態ではあります）バッテリーが消耗しており、充電せずに使うと１日持ちません。充電しながら使えば問題なく使用できます。中古品なので神経質な方はご遠慮ください。',
+            'user_id' => 3,
+            'category_id' => 1,
+            'status_id' => 1,
+            'paystatus_id' => 2,
+            'area_id' => 23,
+            'day_id' => 2,
+            'price' => 31300,
+            'imgpath' => 'image/5.jpg',
+        ]);
     }
 }
