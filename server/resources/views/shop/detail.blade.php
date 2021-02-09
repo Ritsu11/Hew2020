@@ -138,9 +138,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12 text-center text-md-left text-md-right">
-                                            <button class="btn btn-primary btn-rounded">
-                                                <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to
-                                                cart</button>
+                                            <button class="btn btn-primary btn-rounded">入札</button>
                                         </div>
                                     </div>
                                 </div>

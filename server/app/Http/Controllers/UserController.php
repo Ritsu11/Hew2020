@@ -23,7 +23,7 @@ class UserController extends Controller
     public function showDetail($id)
     {
         $detail = Sell::find($id);
-        if ($detail !== null) {
+        if (!empty($detail)) {
             $user = DB::table('users')->where('id', $detail->user_id)->first();
             $category = DB::table('categorys')->where('id', $detail->category_id)->first();
             $status = DB::table('statuses')->where('id', $detail->status_id)->first();

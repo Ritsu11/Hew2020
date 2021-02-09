@@ -51,21 +51,20 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                     class="fas fa-list mr-1"></i>カテゴリから探す</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">すべて</a>
-                                <a class="dropdown-item" href="#">コンピュータ</a>
-                                <a class="dropdown-item" href="#">家電、AV、カメラ</a>
-                                <a class="dropdown-item" href="#">本、雑誌</a>
-                                <a class="dropdown-item" href="#">映画、ビデオ</a>
-                                <a class="dropdown-item" href="#">おもちゃ、ゲーム</a>
-                                <a class="dropdown-item" href="#">アンティーク、コレクション</a>
-                                <a class="dropdown-item" href="#">スポーツ、レジャー</a>
-                                <a class="dropdown-item" href="#">自動車、オートバイ</a>
-                                <a class="dropdown-item" href="#">ファッション</a>
-                                <a class="dropdown-item" href="#">アクセサリー、時計</a>
-                                <a class="dropdown-item" href="#">食品、飲料</a>
-                                <a class="dropdown-item" href="#">住まい、インテリア</a>
-                                <a class="dropdown-item" href="#">事務、店舗用品</a>
-                                <a class="dropdown-item" href="#">その他</a>
+                                <a class="dropdown-item" href="{{ url('/search') }}">すべて</a>
+                                    <a class="dropdown-item" href="{{ url('/search/pc') }}">コンピュータ</a>
+                                    <a class="dropdown-item" href="{{ url('/search/el') }}">家電、AV、カメラ</a>
+                                    <a class="dropdown-item" href="{{ url('/search/bk') }}">本、雑誌</a>
+                                    <a class="dropdown-item" href="{{ url('/search/mv') }}">映画、ビデオ</a>
+                                    <a class="dropdown-item" href="{{ url('/search/gam') }}">おもちゃ、ゲーム</a>
+                                    <a class="dropdown-item" href="{{ url('/search/cl') }}">アンティーク、コレクション</a>
+                                    <a class="dropdown-item" href="{{ url('/search/sp') }}">スポーツ、レジャー</a>
+                                    <a class="dropdown-item" href="{{ url('/search/bik') }}">自動車、オートバイ</a>
+                                    <a class="dropdown-item" href="{{ url('/search/fs') }}">ファッション</a>
+                                    <a class="dropdown-item" href="{{ url('/search/ac') }}">アクセサリー、時計</a>
+                                    <a class="dropdown-item" href="{{ url('/search/fd') }}">食品、飲料</a>
+                                    <a class="dropdown-item" href="{{ url('/search/int') }}">住まい、インテリア</a>
+                                    <a class="dropdown-item" href="{{ url('/search/wk') }}">事務、店舗用品</a>
                             </div>
                         </li>
                         @guest

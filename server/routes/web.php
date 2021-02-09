@@ -23,7 +23,20 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'UserController@index');
 Route::get('/detail/{id}', 'UserController@showDetail')->name('show');
-Route::get('/search', 'UserController@search');
+Route::get('/search', 'CategoryController@search');
+Route::get('/search/pc', 'CategoryController@computerSearch');
+Route::get('/search/el', 'CategoryController@electricalSearch');
+Route::get('/search/bk', 'CategoryController@bookSearch');
+Route::get('/search/mv', 'CategoryController@movieSearch');
+Route::get('/search/gam', 'CategoryController@gameSearch');
+Route::get('/search/cl', 'CategoryController@collectionSearch');
+Route::get('/search/sp', 'CategoryController@sportSearch');
+Route::get('/search/bik', 'CategoryController@bikeSearch');
+Route::get('/search/fs', 'CategoryController@fashionSearch');
+Route::get('/search/ac', 'CategoryController@accessoriesSearch');
+Route::get('/search/fd', 'CategoryController@foodSearch');
+Route::get('/search/int', 'CategoryController@interiorSearch');
+Route::get('/search/wk', 'CategoryController@workSearch');
 
 Route::group(['middleware' => 'auth'], function () {
 
