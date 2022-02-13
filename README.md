@@ -23,3 +23,7 @@ root@???/var/www/html# chown www-data storage/ -R
 Composer version 2.0.4    
 Node.js v10.22.1  
 MySQL 5.7  
+
+## 今後
+
+４年時の夏過ぎに全面的にLaravel9で書き換える予定です
